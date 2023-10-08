@@ -1,0 +1,27 @@
+{
+  "$schema": "https://hypar.io/Schemas/Function.json",
+  "id": "70b61a67-8a8c-46e8-873c-ce5603d928bb",
+  "name": "Precincts",
+  "description": "The Precincts function.",
+  "language": "C#",
+  "model_output": "Precinct",
+  "overrides": {
+    "Precincts": {
+      "behaviors": {
+        "add": true,
+        "quickAdd": true,
+        "remove": true
+      },
+      "targetType": "https://schemas.hypar.io/Site.json",
+      "schema": {
+        "Perimeter": {
+          "description": "The geometry of the street, representing its baseline and width",
+          "$ref": "https://schemas.hypar.io/Polygon.json"
+        }
+      }
+    }
+  },
+  "repository_url": "https://github.com/hypar-io/function",
+  "last_updated": "0001-01-01T00:00:00",
+  "cli_version": "1.9.0-alpha.3"
+}

@@ -1,0 +1,32 @@
+{
+  "$schema": "https://hypar.io/Schemas/Function.json",
+  "id": "e811fc41-c01c-444c-abd2-a459ba99327f",
+  "name": "Lots",
+  "description": "The Lots function.",
+  "language": "C#",
+  "model_dependencies": [
+    {
+      "name": "Streets and Blocks",
+      "optional": true
+    }
+  ],
+  "overrides": {
+    "Lots": {
+      "behaviors": {
+        "add": true,
+        "quickAdd": true,
+        "remove": true
+      },
+      "targetType": "https://schemas.hypar.io/Site.json",
+      "schema": {
+        "Perimeter": {
+          "description": "The geometry of the street, representing its baseline and width",
+          "$ref": "https://schemas.hypar.io/Polygon.json"
+        }
+      }
+    }
+  },
+  "repository_url": "https://github.com/hypar-io/function",
+  "last_updated": "0001-01-01T00:00:00",
+  "cli_version": "1.9.0-alpha.3"
+}

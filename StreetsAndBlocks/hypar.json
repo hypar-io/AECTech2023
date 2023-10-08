@@ -1,0 +1,51 @@
+{
+  "$schema": "https://hypar.io/Schemas/Function.json",
+  "id": "2b119fe4-0f97-415f-9172-d4dd2e235640",
+  "name": "Streets and Blocks",
+  "description": "The StreetsAndBlocks function.",
+  "language": "C#",
+  "model_output": "Streets and Blocks",
+  "model_dependencies": [
+    {
+      "name": "Precinct",
+      "optional": true
+    }
+  ],
+  "overrides": {
+    "Streets": {
+      "behaviors": {
+        "add": true,
+        "quickAdd": true,
+        "remove": true
+      },
+      "targetType": "https://schemas.hypar.io/Street.json",
+      "schema": {
+        "Geometry": {
+          "description": "The geometry of the street, representing its baseline and width",
+          "$ref": "https://schemas.hypar.io/ThickenedPolyline.json",
+          "default": {
+            "leftWidth": 10,
+            "rightWidth": 10
+          }
+        }
+      }
+    },
+    "Blocks": {
+      "behaviors": {
+        "add": true,
+        "quickAdd": true,
+        "remove": true
+      },
+      "targetType": "https://schemas.hypar.io/Site.json",
+      "schema": {
+        "Perimeter": {
+          "description": "The geometry of the street, representing its baseline and width",
+          "$ref": "https://schemas.hypar.io/Polygon.json"
+        }
+      }
+    }
+  },
+  "repository_url": "https://github.com/hypar-io/function",
+  "last_updated": "0001-01-01T00:00:00",
+  "cli_version": "1.9.0-alpha.3"
+}
