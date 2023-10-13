@@ -1,0 +1,4 @@
+{
+    "image":"mcr.microsoft.com/devcontainers/universal:2", 
+    "postCreateCommand": "dotnet tool install --global hypar.cli --version *-*"
+}
