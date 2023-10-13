@@ -1,4 +1,7 @@
 {
     "image":"mcr.microsoft.com/devcontainers/universal:2", 
-    "postCreateCommand": "dotnet tool install --global hypar.cli --version *-*"
+    "postCreateCommand": "dotnet tool install --global hypar.cli --version *-*",
+    "remoteEnv": {
+        "PATH": "${containerEnv:PATH}:/root/.dotnet/tools"
+    }
 }
