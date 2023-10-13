@@ -1,5 +1,7 @@
 {
-    "image":"mcr.microsoft.com/devcontainers/dotnet:0-6.0", 
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
     "postCreateCommand": "dotnet tool install --global hypar.cli --version *-*",
     "remoteEnv": {
         "PATH": "${containerEnv:PATH}:~/.dotnet/tools"
@@ -7,8 +9,8 @@
     "customizations": {
         "vscode": {
             "extensions": [
-				"ms-dotnettools.dotnet-interactive-vscode"
-			]
+                "ms-dotnettools.dotnet-interactive-vscode"
+            ]
         }
     }
 }
