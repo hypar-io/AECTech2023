@@ -3,5 +3,12 @@
     "postCreateCommand": "dotnet tool install --global hypar.cli --version *-*",
     "remoteEnv": {
         "PATH": "${containerEnv:PATH}:~/.dotnet/tools"
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+				"ms-dotnettools.dotnet-interactive-vscode"
+			]
+        }
     }
 }
