@@ -1,8 +1,8 @@
-# Use dotnet 6 as the base
-FROM mcr.microsoft.com/devcontainers/dotnet:0-6.0
+# Use dotnet 7 as the base
+FROM mcr.microsoft.com/devcontainers/dotnet:0-7.0
 
-# Install .NET 7 SDK
+# Install .NET 6 SDK
 RUN wget https://dot.net/v1/dotnet-install.sh \
     && chmod +x dotnet-install.sh \
-    && ./dotnet-install.sh -c 7.0 -Version latest \
+    && ./dotnet-install.sh -c 6.0 -Version latest \
     && rm dotnet-install.sh
