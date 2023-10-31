@@ -13,5 +13,8 @@
                 "ms-dotnettools.csdevkit"
             ]
         }
+    },
+    "settings": {
+        "terminal.integrated.defaultProfile.linux": "zsh", 
     }
 }
