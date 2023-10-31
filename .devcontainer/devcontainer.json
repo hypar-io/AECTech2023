@@ -11,12 +11,8 @@
             "extensions": [
                 "ms-dotnettools.dotnet-interactive-vscode",
                 "ms-dotnettools.csdevkit"
-            ]
-        }
-    },
-    "customizations": {
-        "vscode": {
-            "settings": {
+            ],
+             "settings": {
                 "terminal.integrated.defaultProfile.linux": "zsh",
                 "terminal.integrated.profiles.linux": { "zsh": { "path": "/bin/zsh" } }
             }
