@@ -1,0 +1,24 @@
+{
+  "$schema": "https://hypar.io/Schemas/Function.json",
+  "id": "61753b2d-eb14-4ef1-87c4-e360eb6f274d",
+  "name": "test run on codespace",
+  "description": "",
+  "language": "C#",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "dfgdg": {
+        "default": 0,
+        "type": "number",
+        "$hyparOrder": 0,
+        "$hyparStyle": "number"
+      }
+    }
+  },
+  "overrides": {},
+  "outputs": [],
+  "repository_url": "",
+  "filters": {},
+  "last_updated": "0001-01-01T00:00:00",
+  "cli_version": "1.9.0-alpha.11"
+}
