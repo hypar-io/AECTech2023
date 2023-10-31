@@ -1,0 +1,16 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Sign in to Hypar",
+            "type": "shell",
+            "command": "hypar sign-in --auth-flow",
+            "problemMatcher": []
+        },
+        {
+            "label": "Pull in instructor updates",
+            "type": "shell",
+            "command": "git merge origin/main"
+        }
+    ]
+}
