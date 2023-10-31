@@ -10,7 +10,7 @@
         {
             "label": "Pull in instructor updates",
             "type": "shell",
-            "command": "git fetch upstream && git merge upstream/main",
+            "command": "git fetch upstream && git merge upstream/main --no-edit",
             "problemMatcher": []
         }
     ]
