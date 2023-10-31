@@ -10,7 +10,8 @@
         {
             "label": "Pull in instructor updates",
             "type": "shell",
-            "command": "git merge origin/main"
+            "command": "git merge origin/main",
+            "problemMatcher": []
         }
     ]
 }
