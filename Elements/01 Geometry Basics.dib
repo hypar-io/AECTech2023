@@ -58,3 +58,14 @@ You can skip the `new Vector3` part in many cases. (Polyline takes a `params[]` 
 // A slightly shorter way to do the same thing:
 var polyline2 = new Polyline((0,0), (2,0), (2,2), (0,2), (0,2,5));
 return polyline2;
+
+#!markdown
+
+There are also convenience shapes for common cases. Also note how we can display multiple polylines at once by returning a list or array:
+
+#!csharp
+
+var rectangle = Polygon.Rectangle(10,10);
+var star = Polygon.Star(5,3,5);
+var l = Polygon.L(2, 2, 0.5);
+return new [] {rectangle, star, l };
