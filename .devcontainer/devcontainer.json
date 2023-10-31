@@ -2,7 +2,7 @@
     "build": {
         "dockerfile": "Dockerfile"
     },
-    "postCreateCommand": "dotnet tool install --global hypar.cli --version *-*",
+    "postCreateCommand": "dotnet tool install --global hypar.cli",
     "remoteEnv": {
         "PATH": "${containerEnv:PATH}:~/.dotnet/tools"
     },
