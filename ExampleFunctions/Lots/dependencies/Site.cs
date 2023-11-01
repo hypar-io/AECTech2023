@@ -91,7 +91,7 @@ namespace Elements
             {
                 Profile? polygon = polygons[i];
                 var centroid = polygon.Perimeter.Centroid();
-                var addId = $"${centroid.X:0.00},{centroid.Y:0.00}";
+                var addId = $"{centroid.X:0.00},{centroid.Y:0.00}";
                 var site = new Site(polygon.Perimeter, addId);
                 list.Add(site);
             }

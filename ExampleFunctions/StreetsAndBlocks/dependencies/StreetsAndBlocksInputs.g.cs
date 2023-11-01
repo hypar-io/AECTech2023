@@ -24,13 +24,13 @@ namespace StreetsAndBlocks
 
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.1.21.0 (Newtonsoft.Json v13.0.0.0)")]
     
-    public  class StreetsAndBlocksInputs : S3Args
+    public  class StreetsAndBlocksInputs : ArgsBase
     
     {
         [Newtonsoft.Json.JsonConstructor]
         
-        public StreetsAndBlocksInputs(Overrides @overrides, string bucketName, string uploadsBucket, Dictionary<string, string> modelInputKeys, string gltfKey, string elementsKey, string ifcKey):
-        base(bucketName, uploadsBucket, modelInputKeys, gltfKey, elementsKey, ifcKey)
+        public StreetsAndBlocksInputs(Overrides @overrides, Dictionary<string, string> modelInputKeys, string gltfKey, string elementsKey, string ifcKey):
+        base(modelInputKeys, gltfKey, elementsKey, ifcKey)
         {
             var validator = Validator.Instance.GetFirstValidatorForType<StreetsAndBlocksInputs>();
             if(validator != null)

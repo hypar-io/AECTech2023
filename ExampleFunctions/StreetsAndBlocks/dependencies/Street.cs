@@ -58,11 +58,12 @@ namespace Elements
             this.SetAllProperties(add);
         }
 
-        public Street(ThickenedPolyline geometry)
+        public Street(ThickenedPolyline geometry, string AddId)
         {
             this.Material = new Material("street", Colors.Gray);
             this.StripeMaterial = new Material("Center stripe", Colors.White);
             this.Geometry = geometry;
+            this.AddId = AddId;
         }
 
         public Polyline GetCenterline()

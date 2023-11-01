@@ -64,7 +64,10 @@ namespace Elements
                 foreach (var ts in trimmedSegment)
                 {
                     if (ts.Length() < 10) continue;
-                    streets.Add(new Street(new ThickenedPolyline(new Polyline(ts.Start, ts.End), 10, 10)));
+                    streets.Add(new Street(new ThickenedPolyline(new Polyline(ts.Start, ts.End), 10, 10))
+                    {
+                        AddId = this.AddId + ts.Start.ToString() + ts.End.ToString()
+                    });
                 }
             }
             foreach (var segment in vSeparators.OfType<Line>())
@@ -74,12 +77,18 @@ namespace Elements
                 {
                     if (ts.Length() < 10) continue;
 
-                    streets.Add(new Street(new ThickenedPolyline(new Polyline(ts.Start, ts.End), 10, 10)));
+                    streets.Add(new Street(new ThickenedPolyline(new Polyline(ts.Start, ts.End), 10, 10))
+                    {
+                        AddId = this.AddId + ts.Start.ToString() + ts.End.ToString()
+                    });
                 }
             }
             foreach (var segment in this.Perimeter.Segments())
             {
-                streets.Add(new Street(new ThickenedPolyline(new Polyline(segment.Start, segment.End), 10, 10)));
+                streets.Add(new Street(new ThickenedPolyline(new Polyline(segment.Start, segment.End), 10, 10))
+                {
+                    AddId = this.AddId + segment.Start.ToString() + segment.End.ToString()
+                });
             }
             return streets;
         }

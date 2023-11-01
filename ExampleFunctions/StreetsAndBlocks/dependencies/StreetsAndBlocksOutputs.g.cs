@@ -17,16 +17,13 @@ namespace StreetsAndBlocks
     public class StreetsAndBlocksOutputs: SystemResults
     {
 
-
         /// <summary>
         /// Construct a StreetsAndBlocksOutputs with default inputs.
         /// This should be used for testing only.
         /// </summary>
         public StreetsAndBlocksOutputs() : base()
         {
-
         }
-
 
 	}
 }
