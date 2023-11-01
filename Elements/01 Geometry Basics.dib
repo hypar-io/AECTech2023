@@ -51,7 +51,9 @@ return polyline1;
 
 #!markdown
 
-You can skip the `new Vector3` part in many cases. (Polyline takes a `params[]` argument, and we auto-convert Tuples with 2 and 3 elements to `Vector3`, if you're curious how this works.)
+You can skip the `new Vector3` part in many cases. 
+
+(Polyline takes a `params[]` argument, and we auto-convert Tuples with 2 and 3 elements to `Vector3`, if you're curious how this works.)
 
 #!csharp
 
@@ -61,11 +63,36 @@ return polyline2;
 
 #!markdown
 
-There are also convenience shapes for common cases. Also note how we can display multiple polylines at once by returning a list or array:
+# Polygons
+A `Polygon` is just like a `Polyline`, except it represents a closed shape, and it must be planar.
+
+#!csharp
+
+var polygon = new Polygon((0,0), (2,2), (4,0), (4,4), (0,4));
+return polygon;
+
+#!markdown
+
+There are also convenience shapes for common cases: 
+- Rectangle
+- Star
+- L
+- U
+- Ngon
+
+Also note how we can display multiple polylines at once in a notebook by returning a list or array:
 
 #!csharp
 
 var rectangle = Polygon.Rectangle(10,10);
 var star = Polygon.Star(5,3,5);
 var l = Polygon.L(2, 2, 0.5);
-return new [] {rectangle, star, l };
+var u = Polygon.U(5, 3, 0.75);
+var hexagon = Polygon.Ngon(6, 10);
+return new [] { rectangle, star, l, u, hexagon };
+
+#!markdown
+
+# Exercise
+
+Use a for loop to create 20 concentric rectangles, each 1 unit larger than the previous one. Return them in a list so we can see them all.

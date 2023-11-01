@@ -14,7 +14,7 @@ If you haven't used code notebooks like jupyter before, this might take a little
 
 #!markdown
 
-Some cells are Markdown cells, like this one. You can double-click on them to edit them. When you're done editing, you can run the cell by pressing `Ctrl+Enter`.
+Some cells are Markdown cells, like this one. You can double-click on them to edit them. When you're done editing, you can run the cell by pressing `Ctrl+Enter` or `Shift+Enter`.
 
 #!markdown
 
@@ -51,3 +51,9 @@ return mass;
 #!markdown
 
 You should be able to zoom in and out and orbit the model. Try it!
+
+#!markdown
+
+# Exercise
+
+Create a new code cell. Write some code and execute it! Print "Hello world," or do some basic math. (Don't worry, we'll get to more interesting exercises in the next notebooks.)
