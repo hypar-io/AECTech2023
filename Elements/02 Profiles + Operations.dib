@@ -9,9 +9,6 @@
 #!csharp
 
 #r "nuget: Hypar.Elements, *-*"
-
-#!csharp
-
 using Elements.Geometry.Solids;
 Formatter.Register<SolidOperation>((solidOp, writer) => {
     var model = new Model();
