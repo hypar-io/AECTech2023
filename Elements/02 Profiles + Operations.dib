@@ -145,10 +145,12 @@ return Profile.UnionAll(new [] {p1, p2});
 var splitLine1 = new Polyline((-10, 0), (0, 1), (10, 0));
 var splitLine2 = new Polyline((0,-10), (3, 10));
 
-var splits = Profile.Split(new [] {p1}, new Polyline[] {splitLine, splitLine2});
+var splits = Profile.Split(new [] {p1}, new Polyline[] {splitLine1, splitLine2});
 var random = new Random(3);
 return splits.Select(s => new Extrude(s, random.NextDouble() * 10, Vector3.ZAxis));
 
 #!markdown
 
 # Exercise
+
+Create a profile with a hole, and create an extrude from it. Then, create a representation from the extrude. Consider adding an additional void operation to the represenation to subtract from the extrude. Finally, return the representation.
