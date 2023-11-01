@@ -10,16 +10,18 @@
 
 #r "nuget: Hypar.Elements, *-*"
 using Elements.Geometry.Solids;
+var defaultMat = new Material("Default", "#dddddd");
+
 Formatter.Register<SolidOperation>((solidOp, writer) => {
     var model = new Model();
-    model.AddElement(new GeometricElement { Representation = solidOp});
+    model.AddElement(new GeometricElement { Representation = solidOp, Material= defaultMat});
     var src = GetModelViewerSrc(model);
     writer.Write(src);
 
 }, "text/html");
 Formatter.Register<Representation>((representation, writer) => {
     var model = new Model();
-    model.AddElement(new GeometricElement { Representation = representation});
+    model.AddElement(new GeometricElement { Representation = representation, Material= defaultMat});
     var src = GetModelViewerSrc(model);
     writer.Write(src);
 
@@ -27,7 +29,7 @@ Formatter.Register<Representation>((representation, writer) => {
 Formatter.Register<IEnumerable<SolidOperation>>((solidOps, writer) => {
     var model = new Model();
     foreach(var solidOp in solidOps) {
-        model.AddElement(new GeometricElement { Representation = solidOp});
+        model.AddElement(new GeometricElement { Representation = solidOp, Material= defaultMat});
     }
     var src = GetModelViewerSrc(model);
     writer.Write(src);
