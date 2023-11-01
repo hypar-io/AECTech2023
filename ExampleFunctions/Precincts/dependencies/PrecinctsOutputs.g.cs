@@ -17,16 +17,13 @@ namespace Precincts
     public class PrecinctsOutputs: SystemResults
     {
 
-
         /// <summary>
         /// Construct a PrecinctsOutputs with default inputs.
         /// This should be used for testing only.
         /// </summary>
         public PrecinctsOutputs() : base()
         {
-
         }
-
 
 	}
 }

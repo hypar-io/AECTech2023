@@ -17,16 +17,13 @@ namespace Lots
     public class LotsOutputs: SystemResults
     {
 
-
         /// <summary>
         /// Construct a LotsOutputs with default inputs.
         /// This should be used for testing only.
         /// </summary>
         public LotsOutputs() : base()
         {
-
         }
-
 
 	}
 }
