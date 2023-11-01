@@ -12,6 +12,8 @@ You will see a sign in link in the console at the bottom of the screen — go to
 
 ![Sign in to Hypar](images/signin.gif)
 
+Alternately, you can run `hypar sign-in --auth-flow` in the vs code console.
+
 ## About this repository
 
 There are two primary directories:
